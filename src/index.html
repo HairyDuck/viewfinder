@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self';">
+    <title>Viewfinder</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../node_modules/viewerjs/dist/viewer.min.css">
+</head>
+<body class="light-mode">
+    <div id="image-container" ondrop="handleDrop(event)" ondragover="event.preventDefault()">
+        <div id="no-image" class="no-image">
+            Drag and drop an image here or use the Open menu to load an image.
+        </div>
+        <img id="current-image" src="" alt="Image Viewer" class="hidden">
+    </div>
+
+    <div id="toolbar" class="toolbar-bottom">
+        <button id="prev-btn" class="nav-btn" title="Previous Image">
+            <img src="styles/images/prev-arrow.png" alt="Previous Image" width="24">
+        </button>
+        <button id="next-btn" class="nav-btn" title="Next Image">
+            <img src="styles/images/next-arrow.png" alt="Next Image" width="24">
+        </button>
+    </div>
+
+    <!-- Viewer.js -->
+    <script src="../node_modules/viewerjs/dist/viewer.min.js"></script>
+    <script src="renderer.js"></script>
+</body>
+</html>

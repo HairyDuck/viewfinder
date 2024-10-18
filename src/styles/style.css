@@ -1,0 +1,138 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Image container */
+#image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: calc(100vh - 100px); /* Adjust height to account for toolbar and margin */
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100vh - 60px); /* Adjust for toolbar */
+    padding: 20px;
+    position: relative;
+}
+
+#current-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+#current-image.hidden {
+    display: none;
+}
+
+#no-image {
+    font-size: 24px;
+    color: #888;
+    text-align: center;
+    font-weight: bold;
+}
+
+#no-image.hidden {
+    display: none;
+}
+
+/* Toolbar */
+.toolbar-bottom {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #EEE;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #CCC;
+}
+
+#toolbar .nav-btn {
+    margin: 0 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+#toolbar .nav-btn img {
+    vertical-align: middle;
+}
+
+#toolbar .nav-btn:hover {
+    transform: scale(1.1);
+}
+
+#toolbar .nav-btn:active {
+    transform: scale(0.95);
+}
+
+/* Disabled State for Navigation Buttons */
+#toolbar .nav-btn:disabled {
+    opacity: 0.5;        /* Makes the button appear faded */
+    cursor: not-allowed; /* Changes the cursor to indicate the button is disabled */
+}
+
+/* Theme preview */
+.theme-preview {
+    width: 100px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #CCC;
+}
+
+.theme-preview.light {
+    background-color: #F3F3F3;
+    color: #333;
+}
+
+.theme-preview.dark {
+    background-color: #121212;
+    color: #E0E0E0;
+}
+
+.theme-preview.system {
+    background-color: #FFF;
+    color: #000;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007BFF;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6C757D;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}

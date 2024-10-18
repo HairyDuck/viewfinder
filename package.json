@@ -1,0 +1,25 @@
+
+{
+  "name": "viewfinder",
+  "version": "1.0.1",
+  "description": "A lightweight and intuitive image viewer built with Electron.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-packager . Viewfinder --platform=win32 --arch=x64 --out=dist",
+    "build:linux": "electron-packager . Viewfinder --platform=linux --arch=x64 --out=dist",
+    "build:mac": "electron-packager . Viewfinder --platform=darwin --arch=x64 --out=dist"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "electron-context-menu": "^3.3.1",
+    "electron-store": "^8.0.0",
+    "sharp": "^0.32.1",
+    "viewerjs": "^1.11.6"
+  },
+  "devDependencies": {
+    "electron": "^25.3.0",
+    "electron-packager": "^17.1.1"
+  }
+}
